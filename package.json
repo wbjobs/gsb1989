@@ -1,0 +1,14 @@
+{
+  "name": "force-canvas-graph",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Canvas + Web Worker + IndexedDB force-directed graph with clustering and graceful degradation",
+  "scripts": {
+    "start": "node scripts/serve.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

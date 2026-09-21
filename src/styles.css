@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #0f172a;
+  background: #e2e8f0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #ffffff;
+  border-bottom: 1px solid #cbd5e1;
+  box-shadow: 0 1px 3px rgb(15 23 42 / 8%);
+}
+
+.toolbar h1 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.toolbar p {
+  margin: 2px 0 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+button,
+select {
+  height: 34px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  color: #0f172a;
+  font: inherit;
+}
+
+button {
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+}
+
+select {
+  padding: 0 8px;
+}
+
+.toolbar label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #334155;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.checkbox input {
+  accent-color: #2563eb;
+}
+
+.statusbar {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 6px 16px;
+  background: #f8fafc;
+  border-bottom: 1px solid #cbd5e1;
+  font-size: 13px;
+}
+
+#status {
+  color: #1e293b;
+}
+
+#warnings {
+  color: #b45309;
+}
+
+.canvas-shell {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 1px 1px, rgb(100 116 139 / 18%) 1px, transparent 0) 0 0 / 24px 24px,
+    #f8fafc;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+.fallback-message {
+  position: absolute;
+  inset: 16px;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: #991b1b;
+  background: rgb(254 242 242 / 92%);
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  text-align: center;
+}

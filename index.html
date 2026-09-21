@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>力导向关系图</title>
+    <link rel="stylesheet" href="./src/styles.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="toolbar">
+        <div>
+          <h1>力导向关系图</h1>
+          <p>Canvas + Web Worker + IndexedDB</p>
+        </div>
+        <label>
+          节点规模
+          <select id="nodeCount">
+            <option value="300">300</option>
+            <option value="1000" selected>1000</option>
+            <option value="3000">3000</option>
+          </select>
+        </label>
+        <button id="regenerate" type="button">重新生成</button>
+        <button id="reheat" type="button">重新布局</button>
+        <button id="recluster" type="button">重新聚类</button>
+        <label class="checkbox">
+          <input id="showClusters" type="checkbox" checked>
+          聚类区域
+        </label>
+      </header>
+      <section class="statusbar">
+        <span id="status">正在初始化…</span>
+        <span id="warnings" aria-live="polite"></span>
+      </section>
+      <section id="canvasShell" class="canvas-shell">
+        <canvas id="graphCanvas" aria-label="力导向关系图画布"></canvas>
+        <div id="fallbackMessage" class="fallback-message" hidden></div>
+      </section>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
